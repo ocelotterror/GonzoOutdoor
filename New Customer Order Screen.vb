@@ -35,7 +35,17 @@
    
 
     Private Sub saveButton_Click(sender As Object, e As EventArgs) Handles saveButton.Click
-        AddCustomer()
+        'save the changes to the db
+        If MsgBox("Are you sure you want to save?", vbOKCancel) = vbOK Then
+            AddCustomer()
+            'save the changes to the db
+            If MsgBox("Would you like to add the more information about the customer?", vbOKCancel) = vbOK Then
+                MemInputForm.Show()
+            Else
+                'do nothing
+            End If
+
+        End If
     End Sub
 
   

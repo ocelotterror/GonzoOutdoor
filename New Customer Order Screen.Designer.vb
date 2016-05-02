@@ -43,7 +43,7 @@ Partial Class NewCustomerOrder
         Me.cnButton.Location = New System.Drawing.Point(183, 165)
         Me.cnButton.Name = "cnButton"
         Me.cnButton.Size = New System.Drawing.Size(75, 23)
-        Me.cnButton.TabIndex = 43
+        Me.cnButton.TabIndex = 8
         Me.cnButton.Text = "Exit"
         Me.cnButton.UseVisualStyleBackColor = True
         '
@@ -52,7 +52,7 @@ Partial Class NewCustomerOrder
         Me.saveButton.Location = New System.Drawing.Point(11, 165)
         Me.saveButton.Name = "saveButton"
         Me.saveButton.Size = New System.Drawing.Size(75, 23)
-        Me.saveButton.TabIndex = 42
+        Me.saveButton.TabIndex = 7
         Me.saveButton.Text = "Save"
         Me.saveButton.UseVisualStyleBackColor = True
         '
@@ -70,7 +70,7 @@ Partial Class NewCustomerOrder
         Me.fnametb.Location = New System.Drawing.Point(11, 66)
         Me.fnametb.Name = "fnametb"
         Me.fnametb.Size = New System.Drawing.Size(82, 20)
-        Me.fnametb.TabIndex = 24
+        Me.fnametb.TabIndex = 3
         '
         'Label5
         '
@@ -86,7 +86,7 @@ Partial Class NewCustomerOrder
         Me.lnameTb.Location = New System.Drawing.Point(183, 65)
         Me.lnameTb.Name = "lnameTb"
         Me.lnameTb.Size = New System.Drawing.Size(82, 20)
-        Me.lnameTb.TabIndex = 44
+        Me.lnameTb.TabIndex = 4
         '
         'Label3
         '
@@ -108,10 +108,10 @@ Partial Class NewCustomerOrder
         '
         'totalTb
         '
-        Me.totalTb.Location = New System.Drawing.Point(11, 139)
+        Me.totalTb.Location = New System.Drawing.Point(11, 140)
         Me.totalTb.Name = "totalTb"
         Me.totalTb.Size = New System.Drawing.Size(69, 20)
-        Me.totalTb.TabIndex = 52
+        Me.totalTb.TabIndex = 5
         '
         'Label6
         '
@@ -127,7 +127,7 @@ Partial Class NewCustomerOrder
         Me.idTextBox.Location = New System.Drawing.Point(186, 25)
         Me.idTextBox.Name = "idTextBox"
         Me.idTextBox.Size = New System.Drawing.Size(82, 20)
-        Me.idTextBox.TabIndex = 62
+        Me.idTextBox.TabIndex = 2
         '
         'Label8
         '
@@ -143,17 +143,17 @@ Partial Class NewCustomerOrder
         Me.onumTextBox.Location = New System.Drawing.Point(14, 26)
         Me.onumTextBox.Name = "onumTextBox"
         Me.onumTextBox.Size = New System.Drawing.Size(82, 20)
-        Me.onumTextBox.TabIndex = 60
+        Me.onumTextBox.TabIndex = 1
         '
         'ordsTb
         '
         Me.ordsTb.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ordsTb.FormattingEnabled = True
-        Me.ordsTb.Items.AddRange(New Object() {"Active", "Inactive", "Pending"})
+        Me.ordsTb.Items.AddRange(New Object() {"New", "Active", "Inactive", ""})
         Me.ordsTb.Location = New System.Drawing.Point(171, 139)
         Me.ordsTb.Name = "ordsTb"
         Me.ordsTb.Size = New System.Drawing.Size(97, 21)
-        Me.ordsTb.TabIndex = 65
+        Me.ordsTb.TabIndex = 6
         '
         'NewCustomerOrder
         '

@@ -31,23 +31,22 @@ Partial Class CustomerOrderInformation
         Me.findTextBox = New System.Windows.Forms.TextBox()
         Me.newCus = New System.Windows.Forms.Button()
         Me.CUSTOMERBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ProjectDB1DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ProjectDB1DataSet = New WindowsApplication1.ProjectDB1DataSet()
         Me.ORDERSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CUSTOMERTableAdapter = New WindowsApplication1.ProjectDB1DataSetTableAdapters.CUSTOMERTableAdapter()
-        Me.ORDERSTableAdapter = New WindowsApplication1.ProjectDB1DataSetTableAdapters.ORDERSTableAdapter()
         Me.ORDERITEMSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ORDER_ITEMSTableAdapter = New WindowsApplication1.ProjectDB1DataSetTableAdapters.ORDER_ITEMSTableAdapter()
-        Me.ProjectDB1DataSetBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.delButton = New System.Windows.Forms.Button()
         Me.exitButton = New System.Windows.Forms.Button()
         Me.refreshButton = New System.Windows.Forms.Button()
+        Me.ProjectDB1DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ProjectDB1DataSet = New WindowsApplication1.ProjectDB1DataSet()
+        Me.CUSTOMERTableAdapter = New WindowsApplication1.ProjectDB1DataSetTableAdapters.CUSTOMERTableAdapter()
+        Me.ORDERSTableAdapter = New WindowsApplication1.ProjectDB1DataSetTableAdapters.ORDERSTableAdapter()
+        Me.ORDER_ITEMSTableAdapter = New WindowsApplication1.ProjectDB1DataSetTableAdapters.ORDER_ITEMSTableAdapter()
+        Me.ProjectDB1DataSetBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.cus_database, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CUSTOMERBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ProjectDB1DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ProjectDB1DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ORDERSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ORDERITEMSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProjectDB1DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProjectDB1DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProjectDB1DataSetBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -57,33 +56,34 @@ Partial Class CustomerOrderInformation
         Me.cus_database.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cus_database.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.cus_database.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical
         Me.cus_database.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.cus_database.GridColor = System.Drawing.SystemColors.ActiveCaption
-        Me.cus_database.Location = New System.Drawing.Point(9, 45)
+        Me.cus_database.Location = New System.Drawing.Point(9, 105)
         Me.cus_database.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cus_database.Name = "cus_database"
-        Me.cus_database.Size = New System.Drawing.Size(623, 164)
+        Me.cus_database.ReadOnly = True
+        Me.cus_database.Size = New System.Drawing.Size(736, 190)
         Me.cus_database.TabIndex = 101
         '
         'mordButton
         '
-        Me.mordButton.Location = New System.Drawing.Point(9, 219)
+        Me.mordButton.Location = New System.Drawing.Point(342, 47)
         Me.mordButton.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.mordButton.Name = "mordButton"
         Me.mordButton.Size = New System.Drawing.Size(104, 20)
-        Me.mordButton.TabIndex = 112
+        Me.mordButton.TabIndex = 4
         Me.mordButton.Text = "Modify Order"
         Me.mordButton.UseVisualStyleBackColor = True
         '
         'soredButton
         '
-        Me.soredButton.Location = New System.Drawing.Point(9, 12)
+        Me.soredButton.Location = New System.Drawing.Point(9, 51)
         Me.soredButton.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.soredButton.Name = "soredButton"
         Me.soredButton.Size = New System.Drawing.Size(157, 20)
-        Me.soredButton.TabIndex = 114
-        Me.soredButton.Text = "Search By Order Num:"
+        Me.soredButton.TabIndex = 1
+        Me.soredButton.Text = "Search By Customer ID:"
         Me.soredButton.UseVisualStyleBackColor = True
         '
         'billNum
@@ -97,18 +97,18 @@ Partial Class CustomerOrderInformation
         '
         'findTextBox
         '
-        Me.findTextBox.Location = New System.Drawing.Point(176, 13)
+        Me.findTextBox.Location = New System.Drawing.Point(174, 52)
         Me.findTextBox.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.findTextBox.Name = "findTextBox"
         Me.findTextBox.Size = New System.Drawing.Size(116, 20)
-        Me.findTextBox.TabIndex = 115
+        Me.findTextBox.TabIndex = 2
         '
         'newCus
         '
-        Me.newCus.Location = New System.Drawing.Point(342, 9)
+        Me.newCus.Location = New System.Drawing.Point(12, 12)
         Me.newCus.Name = "newCus"
         Me.newCus.Size = New System.Drawing.Size(105, 23)
-        Me.newCus.TabIndex = 117
+        Me.newCus.TabIndex = 3
         Me.newCus.Text = "New Customer"
         Me.newCus.UseVisualStyleBackColor = True
         '
@@ -116,6 +116,34 @@ Partial Class CustomerOrderInformation
         '
         Me.CUSTOMERBindingSource.DataMember = "CUSTOMER"
         Me.CUSTOMERBindingSource.DataSource = Me.ProjectDB1DataSetBindingSource
+        '
+        'ORDERSBindingSource
+        '
+        Me.ORDERSBindingSource.DataMember = "ORDERS"
+        Me.ORDERSBindingSource.DataSource = Me.ProjectDB1DataSetBindingSource
+        '
+        'ORDERITEMSBindingSource
+        '
+        Me.ORDERITEMSBindingSource.DataMember = "ORDER_ITEMS"
+        Me.ORDERITEMSBindingSource.DataSource = Me.ProjectDB1DataSetBindingSource
+        '
+        'exitButton
+        '
+        Me.exitButton.Location = New System.Drawing.Point(640, 46)
+        Me.exitButton.Name = "exitButton"
+        Me.exitButton.Size = New System.Drawing.Size(105, 23)
+        Me.exitButton.TabIndex = 7
+        Me.exitButton.Text = "Exit"
+        Me.exitButton.UseVisualStyleBackColor = True
+        '
+        'refreshButton
+        '
+        Me.refreshButton.Location = New System.Drawing.Point(494, 46)
+        Me.refreshButton.Name = "refreshButton"
+        Me.refreshButton.Size = New System.Drawing.Size(105, 23)
+        Me.refreshButton.TabIndex = 5
+        Me.refreshButton.Text = "Refresh"
+        Me.refreshButton.UseVisualStyleBackColor = True
         '
         'ProjectDB1DataSetBindingSource
         '
@@ -127,11 +155,6 @@ Partial Class CustomerOrderInformation
         Me.ProjectDB1DataSet.DataSetName = "ProjectDB1DataSet"
         Me.ProjectDB1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'ORDERSBindingSource
-        '
-        Me.ORDERSBindingSource.DataMember = "ORDERS"
-        Me.ORDERSBindingSource.DataSource = Me.ProjectDB1DataSetBindingSource
-        '
         'CUSTOMERTableAdapter
         '
         Me.CUSTOMERTableAdapter.ClearBeforeFill = True
@@ -139,11 +162,6 @@ Partial Class CustomerOrderInformation
         'ORDERSTableAdapter
         '
         Me.ORDERSTableAdapter.ClearBeforeFill = True
-        '
-        'ORDERITEMSBindingSource
-        '
-        Me.ORDERITEMSBindingSource.DataMember = "ORDER_ITEMS"
-        Me.ORDERITEMSBindingSource.DataSource = Me.ProjectDB1DataSetBindingSource
         '
         'ORDER_ITEMSTableAdapter
         '
@@ -154,42 +172,14 @@ Partial Class CustomerOrderInformation
         Me.ProjectDB1DataSetBindingSource1.DataSource = Me.ProjectDB1DataSet
         Me.ProjectDB1DataSetBindingSource1.Position = 0
         '
-        'delButton
-        '
-        Me.delButton.Location = New System.Drawing.Point(518, 220)
-        Me.delButton.Name = "delButton"
-        Me.delButton.Size = New System.Drawing.Size(105, 23)
-        Me.delButton.TabIndex = 120
-        Me.delButton.Text = "Delete Customer"
-        Me.delButton.UseVisualStyleBackColor = True
-        '
-        'exitButton
-        '
-        Me.exitButton.Location = New System.Drawing.Point(506, 9)
-        Me.exitButton.Name = "exitButton"
-        Me.exitButton.Size = New System.Drawing.Size(105, 23)
-        Me.exitButton.TabIndex = 121
-        Me.exitButton.Text = "Exit"
-        Me.exitButton.UseVisualStyleBackColor = True
-        '
-        'refreshButton
-        '
-        Me.refreshButton.Location = New System.Drawing.Point(138, 215)
-        Me.refreshButton.Name = "refreshButton"
-        Me.refreshButton.Size = New System.Drawing.Size(105, 23)
-        Me.refreshButton.TabIndex = 122
-        Me.refreshButton.Text = "Refresh"
-        Me.refreshButton.UseVisualStyleBackColor = True
-        '
         'CustomerOrderInformation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(635, 281)
+        Me.ClientSize = New System.Drawing.Size(748, 307)
         Me.ControlBox = False
         Me.Controls.Add(Me.refreshButton)
         Me.Controls.Add(Me.exitButton)
-        Me.Controls.Add(Me.delButton)
         Me.Controls.Add(Me.newCus)
         Me.Controls.Add(Me.findTextBox)
         Me.Controls.Add(Me.soredButton)
@@ -200,10 +190,10 @@ Partial Class CustomerOrderInformation
         Me.Text = "Order Entry"
         CType(Me.cus_database, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CUSTOMERBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ProjectDB1DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ProjectDB1DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ORDERSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ORDERITEMSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProjectDB1DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProjectDB1DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProjectDB1DataSetBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -225,7 +215,6 @@ Partial Class CustomerOrderInformation
     Friend WithEvents ORDERITEMSBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ORDER_ITEMSTableAdapter As WindowsApplication1.ProjectDB1DataSetTableAdapters.ORDER_ITEMSTableAdapter
     Friend WithEvents ProjectDB1DataSetBindingSource1 As System.Windows.Forms.BindingSource
-    Friend WithEvents delButton As System.Windows.Forms.Button
     Friend WithEvents exitButton As System.Windows.Forms.Button
     Friend WithEvents refreshButton As System.Windows.Forms.Button
 

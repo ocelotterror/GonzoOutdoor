@@ -216,3 +216,24 @@ C:\Users\Persephone\Source\Repos\GonzoOutdoor\obj\Debug\WindowsApplication1.Reso
 C:\Users\Persephone\Source\Repos\GonzoOutdoor\obj\Debug\WindowsApplication1.NewCustomerOrder.resources
 C:\Users\Persephone\Source\Repos\GonzoOutdoor\obj\Debug\WindowsApplication1.Order_Entry.resources
 C:\Users\Persephone\Source\Repos\GonzoOutdoor\obj\Debug\OutdoorEquip.vbproj.GenerateResource.Cache
+C:\Users\synora1314\Desktop\Sprint 1\GonzoOutdoor\bin\Debug\VIDEORENTAL.exe.config
+C:\Users\synora1314\Desktop\Sprint 1\GonzoOutdoor\obj\Debug\VIDEORENTAL.exe
+C:\Users\synora1314\Desktop\Sprint 1\GonzoOutdoor\obj\Debug\VIDEORENTAL.xml
+C:\Users\synora1314\Desktop\Sprint 1\GonzoOutdoor\obj\Debug\VIDEORENTAL.pdb
+C:\Users\synora1314\Desktop\Sprint 1\GonzoOutdoor\bin\Debug\ProjectDB1.accdb
+C:\Users\synora1314\Desktop\Sprint 1\GonzoOutdoor\bin\Debug\VIDEORENTAL.exe
+C:\Users\synora1314\Desktop\Sprint 1\GonzoOutdoor\bin\Debug\VIDEORENTAL.pdb
+C:\Users\synora1314\Desktop\Sprint 1\GonzoOutdoor\bin\Debug\VIDEORENTAL.xml
+C:\Users\synora1314\Desktop\Sprint 1\GonzoOutdoor\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\synora1314\Desktop\Sprint 1\GonzoOutdoor\obj\Debug\OutdoorEquip.vbprojResolveAssemblyReference.cache
+C:\Users\synora1314\Desktop\Sprint 1\GonzoOutdoor\obj\Debug\WindowsApplication1.Add_Update_Screen.resources
+C:\Users\synora1314\Desktop\Sprint 1\GonzoOutdoor\obj\Debug\WindowsApplication1.CustomerOrderInformation.resources
+C:\Users\synora1314\Desktop\Sprint 1\GonzoOutdoor\obj\Debug\WindowsApplication1.Inventory_directional_screen.resources
+C:\Users\synora1314\Desktop\Sprint 1\GonzoOutdoor\obj\Debug\WindowsApplication1.MemInfoForm.resources
+C:\Users\synora1314\Desktop\Sprint 1\GonzoOutdoor\obj\Debug\WindowsApplication1.MemInputForm.resources
+C:\Users\synora1314\Desktop\Sprint 1\GonzoOutdoor\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\synora1314\Desktop\Sprint 1\GonzoOutdoor\obj\Debug\WindowsApplication1.NewCustomerOrder.resources
+C:\Users\synora1314\Desktop\Sprint 1\GonzoOutdoor\obj\Debug\WindowsApplication1.Order_Entry.resources
+C:\Users\synora1314\Desktop\Sprint 1\GonzoOutdoor\obj\Debug\OutdoorEquip.vbproj.GenerateResource.Cache
+C:\Users\synora1314\Desktop\Sprint 1\GonzoOutdoor\obj\Debug\WindowsApplication1.SplashScreen1.resources
+C:\Users\synora1314\Desktop\Sprint 1\GonzoOutdoor\obj\Debug\WindowsApplication1.GonzoOutdoorSystem.resources

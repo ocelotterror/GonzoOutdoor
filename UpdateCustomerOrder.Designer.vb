@@ -89,17 +89,17 @@ Partial Class Order_Entry
         Me.saveButton.Location = New System.Drawing.Point(61, 262)
         Me.saveButton.Name = "saveButton"
         Me.saveButton.Size = New System.Drawing.Size(75, 23)
-        Me.saveButton.TabIndex = 22
+        Me.saveButton.TabIndex = 6
         Me.saveButton.Text = "Save Changes"
         Me.saveButton.UseVisualStyleBackColor = True
         '
         'cnButton
         '
-        Me.cnButton.Location = New System.Drawing.Point(343, 262)
+        Me.cnButton.Location = New System.Drawing.Point(375, 262)
         Me.cnButton.Name = "cnButton"
         Me.cnButton.Size = New System.Drawing.Size(75, 23)
         Me.cnButton.TabIndex = 23
-        Me.cnButton.Text = "Cancel"
+        Me.cnButton.Text = "Close"
         Me.cnButton.UseVisualStyleBackColor = True
         '
         'preButton
@@ -108,7 +108,7 @@ Partial Class Order_Entry
         Me.preButton.Location = New System.Drawing.Point(75, 12)
         Me.preButton.Name = "preButton"
         Me.preButton.Size = New System.Drawing.Size(40, 25)
-        Me.preButton.TabIndex = 24
+        Me.preButton.TabIndex = 7
         Me.preButton.Text = "<"
         Me.preButton.UseVisualStyleBackColor = True
         '
@@ -128,7 +128,7 @@ Partial Class Order_Entry
         Me.lastButton.Location = New System.Drawing.Point(410, 12)
         Me.lastButton.Name = "lastButton"
         Me.lastButton.Size = New System.Drawing.Size(40, 25)
-        Me.lastButton.TabIndex = 26
+        Me.lastButton.TabIndex = 9
         Me.lastButton.Text = "Last"
         Me.lastButton.UseVisualStyleBackColor = True
         '
@@ -138,7 +138,7 @@ Partial Class Order_Entry
         Me.nextButton.Location = New System.Drawing.Point(355, 12)
         Me.nextButton.Name = "nextButton"
         Me.nextButton.Size = New System.Drawing.Size(40, 25)
-        Me.nextButton.TabIndex = 27
+        Me.nextButton.TabIndex = 8
         Me.nextButton.Text = ">"
         Me.nextButton.UseVisualStyleBackColor = True
         '
@@ -175,7 +175,7 @@ Partial Class Order_Entry
         Me.lnameTb.Location = New System.Drawing.Point(203, 35)
         Me.lnameTb.Name = "lnameTb"
         Me.lnameTb.Size = New System.Drawing.Size(82, 20)
-        Me.lnameTb.TabIndex = 48
+        Me.lnameTb.TabIndex = 2
         '
         'Label1
         '
@@ -191,38 +191,37 @@ Partial Class Order_Entry
         Me.fnametb.Location = New System.Drawing.Point(312, 35)
         Me.fnametb.Name = "fnametb"
         Me.fnametb.Size = New System.Drawing.Size(82, 20)
-        Me.fnametb.TabIndex = 46
+        Me.fnametb.TabIndex = 3
         '
         'odsTextBox
         '
         Me.odsTextBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.odsTextBox.FormattingEnabled = True
-        Me.odsTextBox.Items.AddRange(New Object() {"Active", "Shipped", "Return", "Exchange"})
+        Me.odsTextBox.Items.AddRange(New Object() {"New", "Active", "Inactive", "Shipped", "Process Return", "Process Exchange"})
         Me.odsTextBox.Location = New System.Drawing.Point(86, 100)
         Me.odsTextBox.Name = "odsTextBox"
         Me.odsTextBox.Size = New System.Drawing.Size(97, 21)
-        Me.odsTextBox.TabIndex = 29
+        Me.odsTextBox.TabIndex = 4
         '
         'ototTextBox
         '
         Me.ototTextBox.Location = New System.Drawing.Point(294, 101)
         Me.ototTextBox.Name = "ototTextBox"
         Me.ototTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.ototTextBox.TabIndex = 8
+        Me.ototTextBox.TabIndex = 5
         '
         'idTextBox
         '
         Me.idTextBox.Location = New System.Drawing.Point(67, 35)
         Me.idTextBox.Name = "idTextBox"
         Me.idTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.idTextBox.TabIndex = 6
+        Me.idTextBox.TabIndex = 1
         '
         'onumTextBox
         '
         Me.onumTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.onumTextBox.Location = New System.Drawing.Point(214, 24)
         Me.onumTextBox.Name = "onumTextBox"
-        Me.onumTextBox.ReadOnly = True
         Me.onumTextBox.Size = New System.Drawing.Size(100, 20)
         Me.onumTextBox.TabIndex = 4
         '

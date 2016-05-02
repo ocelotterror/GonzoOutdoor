@@ -338,7 +338,7 @@ Partial Class MemInfoForm
         Me.SearchForMemberToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
         Me.SearchForMemberToolStripMenuItem.Text = "Search For Member"
         '
-        'Form1
+        'MemInfoForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -374,8 +374,8 @@ Partial Class MemInfoForm
         Me.Controls.Add(Me.memIDTextbox)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Name = "MemInfoForm"
+        Me.Text = "MembersInfo"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)

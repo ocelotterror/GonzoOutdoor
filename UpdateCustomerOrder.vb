@@ -1,8 +1,12 @@
 ﻿Public Class Order_Entry
+    'run the databse and ge the record
+
     Private db As New DBControl
     Private CurrentRecord As Integer = 0
    
     Private Function NoErros(Optional Report As Boolean = False) As Boolean
+        'error handling , if there is an error in the program, then this will bypass it or will end gracefully without crashing
+
         If Not String.IsNullOrEmpty(db.Exception) Then
             If Report = True Then MsgBox(db.Exception) ' report erros
             Return False
@@ -65,11 +69,15 @@
     End Sub
 
     Private Sub cnButton_Click(sender As Object, e As EventArgs) Handles cnButton.Click
+
+
+        'close
         Me.Close()
     End Sub
 
 
     Private Sub Order_Entry_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        'pull orders from the db
         GetOrders()
     End Sub
 
@@ -89,30 +97,40 @@
     End Sub
 
     Private Sub preButton_Click(sender As Object, e As EventArgs) Handles preButton.Click
-        'next button
+        'shows the previous button
 
         NExtReocrd(-1)
     End Sub
 
     Private Sub nextButton_Click(sender As Object, e As EventArgs) Handles nextButton.Click
+        'shows the next order information
         NExtReocrd(1)
     End Sub
 
     Private Sub firstButton_Click(sender As Object, e As EventArgs) Handles firstButton.Click
+        'get the first record of the database
         CurrentRecord = 0
         getRocord()
     End Sub
 
     Private Sub lastButton_Click(sender As Object, e As EventArgs) Handles lastButton.Click
+        'get the last reoord of the databse
         CurrentRecord = db.DBDT.Rows.Count - 1
         getRocord()
+
     End Sub
 
     Private Sub saveButton_Click(sender As Object, e As EventArgs) Handles saveButton.Click
-        UpdateRecord()
+        'save the changes to the db
+        If MsgBox("Are you sure you want to save?", vbOKCancel) = vbOK Then
+            UpdateRecord()
+        Else
+            'do nothing
+        End If
+
+     
     End Sub
-
-   
- 
-
 End Class
+
+
+

@@ -81,6 +81,11 @@ Public Class MemInfoForm
 
     Private Sub nextButton_Click(sender As Object, e As EventArgs) Handles nextButton.Click
 
+        Call nextRecord()
+
+    End Sub
+
+    Public Sub nextRecord()
         'Test to see if moving beyond the end of the data set
         'Little strange because mcurrRow is an index subscript (base 0) and Count is a counting of all the records
         '(base 1).  This is why texting mcurrRow + 2 instead of mcurrRow + 1
@@ -94,7 +99,6 @@ Public Class MemInfoForm
 
         'Push current record position to screen
         ScreenFill(mcurrRow)
-
     End Sub
 
 
@@ -197,58 +201,84 @@ Public Class MemInfoForm
     End Sub
 
     Private Sub chargeButton_Click(sender As Object, e As EventArgs) Handles chargeButton.Click
-        Dim chargeAmt As Double
-        Dim choice As Integer
 
-        'displays messagebox for input.
-        chargeAmt = Double.Parse(InputBox("Input charge amount.", "Name Your Price", "0"))
-
-        choice = MessageBox.Show("Is a charge of " & chargeAmt.ToString & " correct?", "Correct?", MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
-
-        If choice = DialogResult.Yes Then
-            Call chargeCust(chargeAmt)
-        End If
+        Call chargeCust()
 
     End Sub
 
-    Public Sub chargeCust(ByVal chargeAmt As Double)
+    Public Sub chargeCust()
         Dim chargeCmd As OleDbCommand = New OleDbCommand
         Dim chargeQuery As String
         Dim rowCount As Integer
         Dim newBalance As Double
+        Dim chargeAmt As Double
+        Dim choice As Integer
+        Dim input As String
 
-        newBalance = Double.Parse(balanceTextbox.Text) + chargeAmt
-
-        'Superfluous code commented out.
-        chargeQuery = "UPDATE CUSTOMER " & "SET balance= " & newBalance.ToString & " WHERE custID= " & custID.Text
-        chargeCmd.Connection = connection
-        chargeCmd.CommandText = chargeQuery
-
-        chargeCmd.Parameters.Add(New OleDbParameter("custID", custID))
-        chargeCmd.Parameters.Add(New OleDbParameter("balance", newBalance))
-
-        Try
-            connection.Open()
-
-            rowCount = chargeCmd.ExecuteNonQuery()
-
-            connection.Close()
-        Catch ex As Exception
-
-        End Try
-
-        If rowCount = 1 Then
-            MessageBox.Show("Charge Successful", "Accepted")
+        'displays messagebox for input and scrubs input.
+        input = InputBox("Input charge amount.", "Name Your Price", "0")
+        If input = "" Then
+            input = "0"
+        ElseIf IsNumeric(input) Then
+            chargeAmt = Double.Parse(input)
         Else
-            MessageBox.Show("Charge Unsuccessful", "Declined")
+            MessageBox.Show("Value must be numeric", "Cash Only", MessageBoxButtons.OK)
         End If
 
-        ds.Tables("CUSTOMER").Rows(mcurrRow).Item(11) = newBalance
 
-        ScreenFill(mcurrRow)
+        'Double checks, then processes charge amount
+        choice = MessageBox.Show("Is a charge of " & chargeAmt.ToString & " correct?", "Correct?", MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
 
+        If choice = DialogResult.No Then
+            Exit Sub
+        Else
+
+            newBalance = Double.Parse(balanceTextbox.Text) + chargeAmt
+
+
+            chargeQuery = "UPDATE CUSTOMER " & "SET balance= " & newBalance.ToString & " WHERE custID= " & custID.Text
+            chargeCmd.Connection = connection
+            chargeCmd.CommandText = chargeQuery
+
+            chargeCmd.Parameters.Add(New OleDbParameter("custID", custID))
+            chargeCmd.Parameters.Add(New OleDbParameter("balance", newBalance))
+
+            Try
+                connection.Open()
+
+                rowCount = chargeCmd.ExecuteNonQuery()
+
+                connection.Close()
+            Catch ex As Exception
+
+            End Try
+
+            If rowCount = 1 Then
+                MessageBox.Show("Charge Successful", "Accepted")
+            Else
+                MessageBox.Show("Charge Unsuccessful", "Declined")
+            End If
+
+            ds.Tables("CUSTOMER").Rows(mcurrRow).Item(11) = newBalance
+
+            ScreenFill(mcurrRow)
+        End If
     End Sub
 
-   
+    Private Sub searchButton_Click(sender As Object, e As EventArgs) Handles searchButton.Click
+        Dim memID As String
+        memID = InputBox("Enter MemberID", "Payment", "0")
+
+        'Checks memID for validity before moving on to charge customer
+        If memID = "" Or IsNumeric(memID) = False Then
+            MessageBox.Show("Must enter a valid Member ID.", "Invalid Member ID")
+            Exit Sub
+        Else
+
+            Do Until memIDTextbox.Text = memID
+                nextRecord()
+            Loop
+        End If
+    End Sub
 End Class

@@ -88,44 +88,18 @@ Public Class MDIParent1
     Private m_ChildFormNumber As Integer
 
     Private Sub ShowMembersStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowMembersStripMenuItem.Click
-        Me.Hide()
+
         MemInfoForm.Show()
+
     End Sub
 
     
     Private Sub PayOnAccountToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PayOnAccountToolStripMenuItem.Click
-        Dim memID As Integer = InputBox("Enter MemberID", "Payment", 0)
-        Dim da As New OleDbDataAdapter
-        Dim connection As New OleDbConnection
-        Dim dr As OleDbDataReader
-        connection.ConnectionString = My.Settings.ProjectDB1ConnectionString1
-        connection.Open()
-        Dim str As String
-        str = " SELECT * from CUSTOMER WHERE (memID = '" & memID & "')"
+        Call findCust()
+        Call MemInfoForm.chargeCust()
+            MemInfoForm.Close()
 
-        MemInputForm.Show()
-        Dim cmd As OleDbCommand = New OleDbCommand(str, connection)
-        Dr = cmd.ExecuteReader
-        While dr.Read
-            MemInputForm.memIDTextBox.Text = dr("memID").ToString
-            MemInputForm.memIDTextBox.Enabled = False
-            MemInputForm.Label1.Text = "payment amount"
-            MemInputForm.billAddress1TextBox.Enabled = False
-            MemInputForm.billAddress2TextBox.Enabled = False
-            MemInputForm.lnameTextBox.Text = dr("lName").ToString
-            MemInputForm.lnameTextBox.Enabled = False
-            MemInputForm.fnameTextBox.Text = dr("fname").ToString
-            MemInputForm.fnameTextBox.Enabled = False
-            MemInputForm.minitialTextBox.Enabled = False
-            MemInputForm.cityTextBox.Enabled = False
-            MemInputForm.stateTextBox.Enabled = False
-            MemInputForm.zipTextBox.Enabled = False
-            MemInputForm.phoneTextBox.Enabled = False
-            MemInputForm.emailTextBox.Enabled = False
-        End While
-        Dim pmtamount As Double
-        Double.TryParse(MemInputForm.balanceTextbox.Text, pmtamount)
-        Call MemInfoForm.chargeCust(pmtamount)
+
     End Sub
 
     Private Sub OrderShowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrderShowToolStripMenuItem.Click
@@ -135,6 +109,25 @@ Public Class MDIParent1
 
     Private Sub InventoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InventoryToolStripMenuItem.Click
         Inventory_directional_screen.Show()
+
+    End Sub
+
+    Private Sub findCust()
+        Dim memID As String
+        memID = InputBox("Enter MemberID", "Payment", "0")
+
+        MemInfoForm.Show()
+
+        'Checks memID for validity before moving on to charge customer
+        If memID = "" Or IsNumeric(memID) = False Then
+            MessageBox.Show("Must enter a valid Member ID.", "Invalid Member ID")
+            Exit Sub
+        Else
+
+            Do Until MemInfoForm.memIDTextbox.Text = memID
+                MemInfoForm.nextRecord()
+            Loop
+        End If
 
     End Sub
 End Class

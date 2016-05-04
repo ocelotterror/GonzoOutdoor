@@ -238,3 +238,7 @@ C:\Users\synora1314\Desktop\Sprint 1\GonzoOutdoor\obj\Debug\OutdoorEquip.vbproj.
 C:\Users\synora1314\Desktop\Sprint 1\GonzoOutdoor\obj\Debug\WindowsApplication1.SplashScreen1.resources
 C:\Users\synora1314\Desktop\Sprint 1\GonzoOutdoor\obj\Debug\WindowsApplication1.GonzoOutdoorSystem.resources
 C:\Users\Persephone\Source\Repos\GonzoOutdoor\obj\Debug\WindowsApplication1.GonzoOutdoorSystem.resources
+C:\Users\Stokes\Source\Repos\GonzoOutdoor2\bin\Debug\VIDEORENTAL.exe.config
+C:\Users\Stokes\Source\Repos\GonzoOutdoor2\obj\Debug\VIDEORENTAL.exe
+C:\Users\Stokes\Source\Repos\GonzoOutdoor2\obj\Debug\VIDEORENTAL.xml
+C:\Users\Stokes\Source\Repos\GonzoOutdoor2\obj\Debug\VIDEORENTAL.pdb

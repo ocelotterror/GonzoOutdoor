@@ -138,4 +138,8 @@ Public Class GonzoOutdoorSystem
     Private Sub PrintToolStripButton_Click(sender As Object, e As EventArgs)
 
     End Sub
+
+    Private Sub FindMembersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FindMembersToolStripMenuItem.Click
+        MemInfoForm.Show()
+    End Sub
 End Class

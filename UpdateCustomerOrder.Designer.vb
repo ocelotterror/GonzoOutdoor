@@ -28,10 +28,6 @@ Partial Class Order_Entry
         Dim Order_StatusLabel As System.Windows.Forms.Label
         Me.saveButton = New System.Windows.Forms.Button()
         Me.cnButton = New System.Windows.Forms.Button()
-        Me.preButton = New System.Windows.Forms.Button()
-        Me.firstButton = New System.Windows.Forms.Button()
-        Me.lastButton = New System.Windows.Forms.Button()
-        Me.nextButton = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.lnameTb = New System.Windows.Forms.TextBox()
@@ -39,8 +35,10 @@ Partial Class Order_Entry
         Me.fnametb = New System.Windows.Forms.TextBox()
         Me.odsTextBox = New System.Windows.Forms.ComboBox()
         Me.ototTextBox = New System.Windows.Forms.TextBox()
-        Me.idTextBox = New System.Windows.Forms.TextBox()
         Me.onumTextBox = New System.Windows.Forms.TextBox()
+        Me.idTextBox = New System.Windows.Forms.TextBox()
+        Me.searchButton = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
         OrdNumLabel = New System.Windows.Forms.Label()
         CustIDLabel = New System.Windows.Forms.Label()
         Order_TotalLabel = New System.Windows.Forms.Label()
@@ -51,7 +49,7 @@ Partial Class Order_Entry
         'OrdNumLabel
         '
         OrdNumLabel.AutoSize = True
-        OrdNumLabel.Location = New System.Drawing.Point(156, 24)
+        OrdNumLabel.Location = New System.Drawing.Point(28, 36)
         OrdNumLabel.Name = "OrdNumLabel"
         OrdNumLabel.Size = New System.Drawing.Size(52, 13)
         OrdNumLabel.TabIndex = 3
@@ -60,7 +58,7 @@ Partial Class Order_Entry
         'CustIDLabel
         '
         CustIDLabel.AutoSize = True
-        CustIDLabel.Location = New System.Drawing.Point(102, 19)
+        CustIDLabel.Location = New System.Drawing.Point(301, -16)
         CustIDLabel.Name = "CustIDLabel"
         CustIDLabel.Size = New System.Drawing.Size(44, 13)
         CustIDLabel.TabIndex = 5
@@ -102,46 +100,6 @@ Partial Class Order_Entry
         Me.cnButton.Text = "Close"
         Me.cnButton.UseVisualStyleBackColor = True
         '
-        'preButton
-        '
-        Me.preButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.preButton.Location = New System.Drawing.Point(75, 12)
-        Me.preButton.Name = "preButton"
-        Me.preButton.Size = New System.Drawing.Size(40, 25)
-        Me.preButton.TabIndex = 7
-        Me.preButton.Text = "<"
-        Me.preButton.UseVisualStyleBackColor = True
-        '
-        'firstButton
-        '
-        Me.firstButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.firstButton.Location = New System.Drawing.Point(29, 12)
-        Me.firstButton.Name = "firstButton"
-        Me.firstButton.Size = New System.Drawing.Size(40, 25)
-        Me.firstButton.TabIndex = 25
-        Me.firstButton.Text = "First"
-        Me.firstButton.UseVisualStyleBackColor = True
-        '
-        'lastButton
-        '
-        Me.lastButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.lastButton.Location = New System.Drawing.Point(410, 12)
-        Me.lastButton.Name = "lastButton"
-        Me.lastButton.Size = New System.Drawing.Size(40, 25)
-        Me.lastButton.TabIndex = 9
-        Me.lastButton.Text = "Last"
-        Me.lastButton.UseVisualStyleBackColor = True
-        '
-        'nextButton
-        '
-        Me.nextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.nextButton.Location = New System.Drawing.Point(355, 12)
-        Me.nextButton.Name = "nextButton"
-        Me.nextButton.Size = New System.Drawing.Size(40, 25)
-        Me.nextButton.TabIndex = 8
-        Me.nextButton.Text = ">"
-        Me.nextButton.UseVisualStyleBackColor = True
-        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Label5)
@@ -152,11 +110,12 @@ Partial Class Order_Entry
         Me.GroupBox1.Controls.Add(Order_StatusLabel)
         Me.GroupBox1.Controls.Add(Order_TotalLabel)
         Me.GroupBox1.Controls.Add(Me.ototTextBox)
+        Me.GroupBox1.Controls.Add(OrdNumLabel)
         Me.GroupBox1.Controls.Add(CustIDLabel)
-        Me.GroupBox1.Controls.Add(Me.idTextBox)
+        Me.GroupBox1.Controls.Add(Me.onumTextBox)
         Me.GroupBox1.Location = New System.Drawing.Point(29, 61)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(421, 195)
+        Me.GroupBox1.Size = New System.Drawing.Size(421, 138)
         Me.GroupBox1.TabIndex = 28
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Modify Order"
@@ -210,49 +169,60 @@ Partial Class Order_Entry
         Me.ototTextBox.Size = New System.Drawing.Size(100, 20)
         Me.ototTextBox.TabIndex = 5
         '
-        'idTextBox
-        '
-        Me.idTextBox.Location = New System.Drawing.Point(67, 35)
-        Me.idTextBox.Name = "idTextBox"
-        Me.idTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.idTextBox.TabIndex = 1
-        '
         'onumTextBox
         '
         Me.onumTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.onumTextBox.Location = New System.Drawing.Point(214, 24)
+        Me.onumTextBox.Location = New System.Drawing.Point(86, 36)
         Me.onumTextBox.Name = "onumTextBox"
         Me.onumTextBox.Size = New System.Drawing.Size(100, 20)
         Me.onumTextBox.TabIndex = 4
+        '
+        'idTextBox
+        '
+        Me.idTextBox.Location = New System.Drawing.Point(232, 15)
+        Me.idTextBox.Name = "idTextBox"
+        Me.idTextBox.Size = New System.Drawing.Size(58, 20)
+        Me.idTextBox.TabIndex = 1
+        '
+        'searchButton
+        '
+        Me.searchButton.Location = New System.Drawing.Point(334, 12)
+        Me.searchButton.Name = "searchButton"
+        Me.searchButton.Size = New System.Drawing.Size(75, 23)
+        Me.searchButton.TabIndex = 29
+        Me.searchButton.Text = "Search"
+        Me.searchButton.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(161, 18)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(65, 13)
+        Me.Label2.TabIndex = 30
+        Me.Label2.Text = "Customer ID"
         '
         'Order_Entry
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(514, 310)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.searchButton)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.nextButton)
-        Me.Controls.Add(Me.lastButton)
-        Me.Controls.Add(Me.firstButton)
-        Me.Controls.Add(Me.preButton)
         Me.Controls.Add(Me.cnButton)
         Me.Controls.Add(Me.saveButton)
-        Me.Controls.Add(OrdNumLabel)
-        Me.Controls.Add(Me.onumTextBox)
+        Me.Controls.Add(Me.idTextBox)
         Me.Name = "Order_Entry"
         Me.Text = "Order_Entry"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        Me.GroupBox1.ResumeLayout(false)
+        Me.GroupBox1.PerformLayout
+        Me.ResumeLayout(false)
+        Me.PerformLayout
 
-    End Sub
+End Sub
     Friend WithEvents saveButton As System.Windows.Forms.Button
     Friend WithEvents cnButton As System.Windows.Forms.Button
-    Friend WithEvents preButton As System.Windows.Forms.Button
-    Friend WithEvents firstButton As System.Windows.Forms.Button
-    Friend WithEvents lastButton As System.Windows.Forms.Button
-    Friend WithEvents nextButton As System.Windows.Forms.Button
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents ototTextBox As System.Windows.Forms.TextBox
     Friend WithEvents idTextBox As System.Windows.Forms.TextBox
@@ -262,4 +232,6 @@ Partial Class Order_Entry
     Friend WithEvents lnameTb As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents fnametb As System.Windows.Forms.TextBox
+    Friend WithEvents searchButton As System.Windows.Forms.Button
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

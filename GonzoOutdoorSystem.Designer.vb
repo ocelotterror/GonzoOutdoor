@@ -41,46 +41,46 @@ Partial Class GonzoOutdoorSystem
         Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolsMenu})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.Name = "MenuStrip"
-        Me.MenuStrip.Size = New System.Drawing.Size(632, 28)
+        Me.MenuStrip.Size = New System.Drawing.Size(632, 25)
         Me.MenuStrip.TabIndex = 5
         Me.MenuStrip.Text = "MenuStrip"
         '
         'ToolsMenu
         '
         Me.ToolsMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ShowMembersStripMenuItem, Me.FindMembersToolStripMenuItem, Me.PayOnAccountToolStripMenuItem, Me.OrderShowToolStripMenuItem, Me.InventoryToolStripMenuItem})
-        Me.ToolsMenu.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolsMenu.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolsMenu.Name = "ToolsMenu"
-        Me.ToolsMenu.Size = New System.Drawing.Size(169, 24)
+        Me.ToolsMenu.Size = New System.Drawing.Size(150, 21)
         Me.ToolsMenu.Text = "&GonzoOutdoor Menu"
         '
         'ShowMembersStripMenuItem
         '
         Me.ShowMembersStripMenuItem.Name = "ShowMembersStripMenuItem"
-        Me.ShowMembersStripMenuItem.Size = New System.Drawing.Size(184, 24)
+        Me.ShowMembersStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.ShowMembersStripMenuItem.Text = "&ShowMembers"
         '
         'FindMembersToolStripMenuItem
         '
         Me.FindMembersToolStripMenuItem.Name = "FindMembersToolStripMenuItem"
-        Me.FindMembersToolStripMenuItem.Size = New System.Drawing.Size(184, 24)
+        Me.FindMembersToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.FindMembersToolStripMenuItem.Text = "Find Members"
         '
         'PayOnAccountToolStripMenuItem
         '
         Me.PayOnAccountToolStripMenuItem.Name = "PayOnAccountToolStripMenuItem"
-        Me.PayOnAccountToolStripMenuItem.Size = New System.Drawing.Size(184, 24)
+        Me.PayOnAccountToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.PayOnAccountToolStripMenuItem.Text = "Pay on account"
         '
         'OrderShowToolStripMenuItem
         '
         Me.OrderShowToolStripMenuItem.Name = "OrderShowToolStripMenuItem"
-        Me.OrderShowToolStripMenuItem.Size = New System.Drawing.Size(184, 24)
+        Me.OrderShowToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.OrderShowToolStripMenuItem.Text = "Order Show"
         '
         'InventoryToolStripMenuItem
         '
         Me.InventoryToolStripMenuItem.Name = "InventoryToolStripMenuItem"
-        Me.InventoryToolStripMenuItem.Size = New System.Drawing.Size(184, 24)
+        Me.InventoryToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.InventoryToolStripMenuItem.Text = "Inventory"
         '
         'GonzoOutdoorSystem

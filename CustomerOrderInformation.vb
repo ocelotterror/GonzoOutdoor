@@ -48,9 +48,19 @@ Public Class CustomerOrderInformation
         'show order entry
         Order_Entry.Show()
     End Sub
+    Private Sub deleteorder()
 
+        db.AddParam("@num", delTextBox.Text)
+        db.ExecQuery(" DELETE * FROM [ORDERS] WHERE OrdNum=@num")
+        'report errors
+        If Not String.IsNullOrEmpty(db.Exception) Then MsgBox(db.Exception) : Exit Sub
+        delTextBox.Clear()
+        RefreshGrid()
+
+    End Sub
     Private Sub newCus_Click(sender As Object, e As EventArgs) Handles newCus.Click
         NewCustomerOrder.Show()
+        RefreshGrid()
     End Sub
    
     Private Sub refreshButton_Click(sender As Object, e As EventArgs) Handles refreshButton.Click
@@ -69,6 +79,11 @@ Public Class CustomerOrderInformation
         Else
             'do nothing
         End If
+        RefreshGrid()
+    End Sub
+
+    Private Sub delButton_Click(sender As Object, e As EventArgs) Handles delButton.Click
+        deleteorder()
 
     End Sub
 End Class

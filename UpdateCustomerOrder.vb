@@ -3,7 +3,7 @@
 
     Private db As New DBControl
     Private CurrentRecord As Integer = 0
-   
+
     Private Function NoErros(Optional Report As Boolean = False) As Boolean
         'error handling , if there is an error in the program, then this will bypass it or will end gracefully without crashing
 
@@ -14,6 +14,26 @@
             Return True
         End If
     End Function
+    Private Sub SearchCustomer(ID As String)
+        ' Add search query parameters using wildcards in search strings
+        db.AddParam("@id", "%" & ID & "%") 'finds name somewhere in that string
+
+        'run query variable is passed through search criteria
+        db.ExecQuery("SELECT * FROM ORDERS " &
+                      "WHERE custID LIKE @id")
+        'report and abort erros
+        If NoErros(True) = False OrElse db.RecordCount < 1 Then Exit Sub 'report errors
+        If Not String.IsNullOrEmpty(db.Exception) Then MsgBox(db.Exception) : Exit Sub
+        Dim r As DataRow = db.DBDT.Rows(CurrentRecord)
+        onumTextBox.Text = r("OrdNum").ToString
+        lnameTb.Text = r("lname").ToString
+        fnametb.Text = r("fname").ToString
+        idTextBox.Text = r("custID").ToString
+        ototTextBox.Text = r("Order Total").ToString
+        odsTextBox.Text = r("Order Status").ToString
+
+
+    End Sub
 
     Private Sub GetOrders()
         'query to fill data
@@ -62,8 +82,7 @@
         'repor error
         If NoErros(True) = False Then Exit Sub
 
-        'refresh and find the updated 
-        GetOrders()
+
 
 
     End Sub
@@ -81,44 +100,7 @@
         GetOrders()
     End Sub
 
-    Private Sub NExtReocrd(Adval As Integer)
-        CurrentRecord += Adval  'advace position by Adval
 
-        'loop to first record
-        If CurrentRecord > db.DBDT.Rows.Count - 1 Then CurrentRecord = 0
-        'loop to the last one
-        If CurrentRecord < 0 Then CurrentRecord = db.DBDT.Rows.Count - 1
-
-        'update by using get record
-        getRocord()
-
-
-
-    End Sub
-
-    Private Sub preButton_Click(sender As Object, e As EventArgs) Handles preButton.Click
-        'shows the previous button
-
-        NExtReocrd(-1)
-    End Sub
-
-    Private Sub nextButton_Click(sender As Object, e As EventArgs) Handles nextButton.Click
-        'shows the next order information
-        NExtReocrd(1)
-    End Sub
-
-    Private Sub firstButton_Click(sender As Object, e As EventArgs) Handles firstButton.Click
-        'get the first record of the database
-        CurrentRecord = 0
-        getRocord()
-    End Sub
-
-    Private Sub lastButton_Click(sender As Object, e As EventArgs) Handles lastButton.Click
-        'get the last reoord of the databse
-        CurrentRecord = db.DBDT.Rows.Count - 1
-        getRocord()
-
-    End Sub
 
     Private Sub saveButton_Click(sender As Object, e As EventArgs) Handles saveButton.Click
         'save the changes to the db
@@ -128,8 +110,15 @@
             'do nothing
         End If
 
-     
+
     End Sub
+
+  
+    Private Sub searchButton_Click(sender As Object, e As EventArgs) Handles searchButton.Click
+        SearchCustomer(idTextBox.Text)
+    End Sub
+
+
 End Class
 
 

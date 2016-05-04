@@ -55,5 +55,10 @@ Public Class DBControl
         Dim NewParam As New OleDbParameter(Name, Value)
         Params.Add(NewParam)
     End Sub
+
+    Sub ExecQuery(p1 As String, p2 As String)
+        Throw New NotImplementedException
+    End Sub
+
 End Class
 

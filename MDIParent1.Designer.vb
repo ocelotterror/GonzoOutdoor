@@ -55,6 +55,7 @@ Partial Class MDIParent1
         Me.FindMembersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PayOnAccountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OrderShowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InventoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip = New System.Windows.Forms.ToolStrip()
         Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.OpenToolStripButton = New System.Windows.Forms.ToolStripButton()
@@ -67,7 +68,6 @@ Partial Class MDIParent1
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.InventoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -265,7 +265,7 @@ Partial Class MDIParent1
         '
         Me.ToolsMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ShowMembersStripMenuItem, Me.FindMembersToolStripMenuItem, Me.PayOnAccountToolStripMenuItem, Me.OrderShowToolStripMenuItem, Me.InventoryToolStripMenuItem})
         Me.ToolsMenu.Name = "ToolsMenu"
-        Me.ToolsMenu.Size = New System.Drawing.Size(47, 20)
+        Me.ToolsMenu.Size = New System.Drawing.Size(48, 20)
         Me.ToolsMenu.Text = "&Tools"
         '
         'ShowMembersStripMenuItem
@@ -291,6 +291,12 @@ Partial Class MDIParent1
         Me.OrderShowToolStripMenuItem.Name = "OrderShowToolStripMenuItem"
         Me.OrderShowToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
         Me.OrderShowToolStripMenuItem.Text = "Order Show"
+        '
+        'InventoryToolStripMenuItem
+        '
+        Me.InventoryToolStripMenuItem.Name = "InventoryToolStripMenuItem"
+        Me.InventoryToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
+        Me.InventoryToolStripMenuItem.Text = "Inventory"
         '
         'ToolStrip
         '
@@ -379,12 +385,6 @@ Partial Class MDIParent1
         Me.ToolStripStatusLabel.Name = "ToolStripStatusLabel"
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(39, 17)
         Me.ToolStripStatusLabel.Text = "Status"
-        '
-        'InventoryToolStripMenuItem
-        '
-        Me.InventoryToolStripMenuItem.Name = "InventoryToolStripMenuItem"
-        Me.InventoryToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
-        Me.InventoryToolStripMenuItem.Text = "Inventory"
         '
         'MDIParent1
         '

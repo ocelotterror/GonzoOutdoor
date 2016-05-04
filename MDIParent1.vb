@@ -130,4 +130,23 @@ Public Class MDIParent1
         End If
 
     End Sub
+
+    Private Sub FindMembersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FindMembersToolStripMenuItem.Click
+        Dim memID As String
+        memID = InputBox("Enter MemberID")
+
+        MemInfoForm.Show()
+
+        'Checks memID for validity before moving on to charge customer
+        If memID = "" Or IsNumeric(memID) = False Then
+            MessageBox.Show("Must enter a valid Member ID.")
+            Exit Sub
+        Else
+
+            Do Until MemInfoForm.memIDTextbox.Text = memID
+                MemInfoForm.nextRecord()
+            Loop
+        End If
+
+    End Sub
 End Class

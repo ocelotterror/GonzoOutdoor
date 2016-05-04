@@ -42,6 +42,7 @@ Partial Class MemInputForm
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'memIDTextBox
@@ -200,11 +201,21 @@ Partial Class MemInputForm
         Me.Label6.TabIndex = 19
         Me.Label6.Text = "Email Address"
         '
-        'Form2
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(334, 353)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 20
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'MemInputForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(495, 470)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -225,7 +236,7 @@ Partial Class MemInputForm
         Me.Controls.Add(Me.lnameTextBox)
         Me.Controls.Add(Me.balanceTextbox)
         Me.Controls.Add(Me.memIDTextBox)
-        Me.Name = "Form2"
+        Me.Name = "MemInputForm"
         Me.Text = "Form2"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -251,4 +262,5 @@ Partial Class MemInputForm
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Button2 As Button
 End Class

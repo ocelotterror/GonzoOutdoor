@@ -4,13 +4,14 @@ Imports System.Windows.Forms
 Imports System.Data.SqlClient
 
 Public Class MemInputForm
+    Private db As New DBControl
     Dim connection As New OleDbConnection
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim dbprovider = "Provider=Microsoft.ACE.OLEDB.12.0;"
         Dim dbsource = "Data Source=|DataDirectory|\ProjectDB1.accdb"
-        Dim sql = "INSERT INTO CUSTOMER (lname, fname, phone, billAddress2," & _
-            "email, billAddress1, city, state, zip, memID, balance, minitial)" & _
+        Dim sql = "INSERT INTO CUSTOMER (lname, fname, phone, billAddress2," &
+            "email, billAddress1, city, state, zip, memID, balance, minitial)" &
             "Values (?,?,?,?,?,?,?,?,?,?,?,?)"
         Try
             Using con = New OleDb.OleDbConnection(dbprovider & dbsource)
@@ -51,5 +52,6 @@ Public Class MemInputForm
         Me.Hide()
         MemInfoForm.Show()
     End Sub
+
 
 End Class

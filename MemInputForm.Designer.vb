@@ -200,7 +200,7 @@ Partial Class MemInputForm
         Me.Label6.TabIndex = 19
         Me.Label6.Text = "Email Address"
         '
-        'Form2
+        'MemInputForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -225,7 +225,7 @@ Partial Class MemInputForm
         Me.Controls.Add(Me.lnameTextBox)
         Me.Controls.Add(Me.balanceTextbox)
         Me.Controls.Add(Me.memIDTextBox)
-        Me.Name = "Form2"
+        Me.Name = "MemInputForm"
         Me.Text = "Form2"
         Me.ResumeLayout(False)
         Me.PerformLayout()

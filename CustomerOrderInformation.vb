@@ -49,9 +49,15 @@ Public Class CustomerOrderInformation
         Order_Entry.Show()
     End Sub
     Private Sub deleteorder()
+        'Order cannot be deleted for accounting purposes
+        MsgBox("Order Cannot Be Deleted For Accounting Purposes!", MessageBoxButtons.OK
+               )
+        MsgBox("Please Set Order to Inactive", MessageBoxButtons.OK
+               )
+
 
         db.AddParam("@num", delTextBox.Text)
-        db.ExecQuery(" DELETE * FROM [ORDERS] WHERE OrdNum=@num")
+        db.ExecQuery(" DELETE * FROM [ORDERS] WHERE Orders.OrdNum=@num")
         'report errors
         If Not String.IsNullOrEmpty(db.Exception) Then MsgBox(db.Exception) : Exit Sub
         delTextBox.Clear()

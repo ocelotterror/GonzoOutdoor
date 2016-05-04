@@ -61,16 +61,16 @@ Partial Class CustomerOrderInformation
         Me.cus_database.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical
         Me.cus_database.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.cus_database.GridColor = System.Drawing.SystemColors.ActiveCaption
-        Me.cus_database.Location = New System.Drawing.Point(9, 105)
+        Me.cus_database.Location = New System.Drawing.Point(13, 12)
         Me.cus_database.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cus_database.Name = "cus_database"
         Me.cus_database.ReadOnly = True
-        Me.cus_database.Size = New System.Drawing.Size(736, 190)
+        Me.cus_database.Size = New System.Drawing.Size(613, 190)
         Me.cus_database.TabIndex = 101
         '
         'mordButton
         '
-        Me.mordButton.Location = New System.Drawing.Point(160, 12)
+        Me.mordButton.Location = New System.Drawing.Point(634, 52)
         Me.mordButton.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.mordButton.Name = "mordButton"
         Me.mordButton.Size = New System.Drawing.Size(104, 20)
@@ -80,7 +80,7 @@ Partial Class CustomerOrderInformation
         '
         'soredButton
         '
-        Me.soredButton.Location = New System.Drawing.Point(12, 79)
+        Me.soredButton.Location = New System.Drawing.Point(13, 215)
         Me.soredButton.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.soredButton.Name = "soredButton"
         Me.soredButton.Size = New System.Drawing.Size(157, 20)
@@ -99,7 +99,7 @@ Partial Class CustomerOrderInformation
         '
         'findTextBox
         '
-        Me.findTextBox.Location = New System.Drawing.Point(177, 80)
+        Me.findTextBox.Location = New System.Drawing.Point(187, 215)
         Me.findTextBox.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.findTextBox.Name = "findTextBox"
         Me.findTextBox.Size = New System.Drawing.Size(116, 20)
@@ -107,7 +107,7 @@ Partial Class CustomerOrderInformation
         '
         'newCus
         '
-        Me.newCus.Location = New System.Drawing.Point(12, 12)
+        Me.newCus.Location = New System.Drawing.Point(633, 12)
         Me.newCus.Name = "newCus"
         Me.newCus.Size = New System.Drawing.Size(105, 23)
         Me.newCus.TabIndex = 3
@@ -141,7 +141,7 @@ Partial Class CustomerOrderInformation
         '
         'exitButton
         '
-        Me.exitButton.Location = New System.Drawing.Point(702, 9)
+        Me.exitButton.Location = New System.Drawing.Point(692, 215)
         Me.exitButton.Name = "exitButton"
         Me.exitButton.Size = New System.Drawing.Size(43, 23)
         Me.exitButton.TabIndex = 7
@@ -150,7 +150,7 @@ Partial Class CustomerOrderInformation
         '
         'refreshButton
         '
-        Me.refreshButton.Location = New System.Drawing.Point(323, 9)
+        Me.refreshButton.Location = New System.Drawing.Point(634, 78)
         Me.refreshButton.Name = "refreshButton"
         Me.refreshButton.Size = New System.Drawing.Size(105, 23)
         Me.refreshButton.TabIndex = 5
@@ -176,7 +176,7 @@ Partial Class CustomerOrderInformation
         '
         'delButton
         '
-        Me.delButton.Location = New System.Drawing.Point(499, 76)
+        Me.delButton.Location = New System.Drawing.Point(670, 179)
         Me.delButton.Name = "delButton"
         Me.delButton.Size = New System.Drawing.Size(75, 23)
         Me.delButton.TabIndex = 102
@@ -185,7 +185,7 @@ Partial Class CustomerOrderInformation
         '
         'delTextBox
         '
-        Me.delTextBox.Location = New System.Drawing.Point(596, 78)
+        Me.delTextBox.Location = New System.Drawing.Point(645, 153)
         Me.delTextBox.Name = "delTextBox"
         Me.delTextBox.Size = New System.Drawing.Size(100, 20)
         Me.delTextBox.TabIndex = 103
@@ -194,7 +194,7 @@ Partial Class CustomerOrderInformation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(748, 307)
+        Me.ClientSize = New System.Drawing.Size(750, 250)
         Me.ControlBox = False
         Me.Controls.Add(Me.delTextBox)
         Me.Controls.Add(Me.delButton)

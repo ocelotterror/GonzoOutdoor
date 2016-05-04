@@ -2,6 +2,7 @@
 Imports System
 Imports System.Data.OleDb
 Imports System.Windows.Forms
+Imports System.Data.SqlClient
 
 'Merged with master.
 
@@ -200,11 +201,9 @@ Public Class MemInfoForm
 
     End Sub
 
-    Private Sub chargeButton_Click(sender As Object, e As EventArgs) Handles chargeButton.Click
 
-        Call chargeCust()
 
-    End Sub
+
 
     Public Sub chargeCust()
         Dim chargeCmd As OleDbCommand = New OleDbCommand

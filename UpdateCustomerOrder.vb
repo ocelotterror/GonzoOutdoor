@@ -44,6 +44,23 @@
         If String.IsNullOrEmpty(idTextBox.Text) Then Exit Sub
         'add parameters because order matters
 
+        ' custID.Text = ds.Tables("CUSTOMER").Rows(pcurrRow).Item(0)
+        'fnameTextbox.Text = ds.Tables("CUSTOMER").Rows(pcurrRow).Item(2)
+        'lnameTextbox.Text = ds.Tables("CUSTOMER").Rows(pcurrRow).Item(1)
+        'billaddress2Textbox.Text = ds.Tables("CUSTOMER").Rows(pcurrRow).Item(4)
+        'emailTextbox.Text = ds.Tables("CUSTOMER").Rows(pcurrRow).Item(5)
+        'billaddress1Textbox.Text = ds.Tables("CUSTOMER").Rows(pcurrRow).Item(6)
+        'phoneTextbox.Text = ds.Tables("CUSTOMER").Rows(pcurrRow).Item(3)
+        'cityTextbox.Text = ds.Tables("CUSTOMER").Rows(pcurrRow).Item(7)
+        'stateTextbox.Text = ds.Tables("CUSTOMER").Rows(pcurrRow).Item(8)
+        'zipTextbox.Text = ds.Tables("CUSTOMER").Rows(pcurrRow).Item(9)
+        'memIDTextbox.Text = ds.Tables("CUSTOMER").Rows(pcurrRow).Item(10)
+        'balanceTextbox.Text = ds.Tables("CUSTOMER").Rows(pcurrRow).Item(11)
+        'minitialTextbox.Text = ds.Tables("CUSTOMER").Rows(pcurrRow).Item(12)
+
+
+
+
         db.AddParam("@cid", idTextBox.Text)
         db.AddParam("@lastname", lnameTb.Text)
         db.AddParam("@firstname", fnametb.Text)

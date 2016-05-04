@@ -216,3 +216,7 @@ C:\Users\Persephone\Source\Repos\GonzoOutdoor\obj\Debug\WindowsApplication1.Reso
 C:\Users\Persephone\Source\Repos\GonzoOutdoor\obj\Debug\WindowsApplication1.NewCustomerOrder.resources
 C:\Users\Persephone\Source\Repos\GonzoOutdoor\obj\Debug\WindowsApplication1.Order_Entry.resources
 C:\Users\Persephone\Source\Repos\GonzoOutdoor\obj\Debug\OutdoorEquip.vbproj.GenerateResource.Cache
+C:\Users\ctheriot\Source\Repos\GonzoOutdoor\bin\Debug\VIDEORENTAL.exe.config
+C:\Users\ctheriot\Source\Repos\GonzoOutdoor\obj\Debug\VIDEORENTAL.exe
+C:\Users\ctheriot\Source\Repos\GonzoOutdoor\obj\Debug\VIDEORENTAL.xml
+C:\Users\ctheriot\Source\Repos\GonzoOutdoor\obj\Debug\VIDEORENTAL.pdb

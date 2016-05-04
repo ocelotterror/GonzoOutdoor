@@ -66,7 +66,7 @@ Public Class MemInputForm
 
         Dim dbprovider = "Provider=Microsoft.ACE.OLEDB.12.0;"
         Dim dbsource = "Data Source=|DataDirectory|\ProjectDB1.accdb"
-        Dim sql = "Update CUSTOMER Set lname=" & lnameTextBox.Text & ", fname=" & fnameTextBox.Text & ", phone=" & phoneTextBox.Text & ", billAddress2=" & billAddress2TextBox.Text & " , email = " & emailTextBox.Text & ", billAddress1 = " & billAddress1TextBox.Text & ", city = " & cityTextBox.Text & ", state = " & stateTextBox.Text & ", zip = " & zipTextBox.Text & ", balance = " & balanceTextbox.Text & ", minitial = " & minitialTextBox.Text & " Where memID= " & Integer.Parse(memIDTextBox.Text)
+        Dim sql = "Update CUSTOMER Set lname=" & lnameTextBox.Text & ", fname=" & fnameTextBox.Text & ", phone=" & phoneTextBox.Text & ", billAddress2=" & billAddress2TextBox.Text & " , email = " & emailTextBox.Text & ", billAddress1 = " & billAddress1TextBox.Text & ", city = " & cityTextBox.Text & ", state = " & stateTextBox.Text & ", zip = " & zipTextBox.Text & ", balance = " & balanceTextbox.Text & ", minitial = " & minitialTextBox.Text & " Where memID= " & memIDTextBox.Text
         '  "Values (?,?,?,?,?,?,?,?,?,?,?,?) where memid = " & memIDTextBox.Text
         'memID=" & memIDTextBox.Text & "
         Try

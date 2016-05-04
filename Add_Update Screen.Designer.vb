@@ -97,7 +97,7 @@ Partial Class Add_Update_Screen
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(83, 26)
+        Me.Label1.Location = New System.Drawing.Point(103, 29)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(95, 13)
         Me.Label1.TabIndex = 19
@@ -108,7 +108,7 @@ Partial Class Add_Update_Screen
         Me.ProdDescTextBox.Location = New System.Drawing.Point(193, 153)
         Me.ProdDescTextBox.Name = "ProdDescTextBox"
         Me.ProdDescTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.ProdDescTextBox.TabIndex = 18
+        Me.ProdDescTextBox.TabIndex = 16
         '
         'ProductPriceTextBox
         '
@@ -122,21 +122,21 @@ Partial Class Add_Update_Screen
         Me.ProdQTextBox.Location = New System.Drawing.Point(193, 81)
         Me.ProdQTextBox.Name = "ProdQTextBox"
         Me.ProdQTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.ProdQTextBox.TabIndex = 16
+        Me.ProdQTextBox.TabIndex = 14
         '
         'SupplierTextBox
         '
         Me.SupplierTextBox.Location = New System.Drawing.Point(193, 214)
         Me.SupplierTextBox.Name = "SupplierTextBox"
         Me.SupplierTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.SupplierTextBox.TabIndex = 15
+        Me.SupplierTextBox.TabIndex = 18
         '
         'ProdNameTextBox
         '
         Me.ProdNameTextBox.Location = New System.Drawing.Point(12, 150)
         Me.ProdNameTextBox.Name = "ProdNameTextBox"
         Me.ProdNameTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.ProdNameTextBox.TabIndex = 14
+        Me.ProdNameTextBox.TabIndex = 15
         '
         'ProductIDTextBox
         '
@@ -150,7 +150,7 @@ Partial Class Add_Update_Screen
         Me.UpdateButton.Location = New System.Drawing.Point(338, 154)
         Me.UpdateButton.Name = "UpdateButton"
         Me.UpdateButton.Size = New System.Drawing.Size(75, 19)
-        Me.UpdateButton.TabIndex = 28
+        Me.UpdateButton.TabIndex = 20
         Me.UpdateButton.Text = "Update "
         Me.UpdateButton.UseVisualStyleBackColor = True
         '
@@ -159,7 +159,7 @@ Partial Class Add_Update_Screen
         Me.CloseButton.Location = New System.Drawing.Point(338, 182)
         Me.CloseButton.Name = "CloseButton"
         Me.CloseButton.Size = New System.Drawing.Size(75, 19)
-        Me.CloseButton.TabIndex = 27
+        Me.CloseButton.TabIndex = 21
         Me.CloseButton.Text = "Close"
         Me.CloseButton.UseVisualStyleBackColor = True
         '
@@ -168,7 +168,7 @@ Partial Class Add_Update_Screen
         Me.AddButton.Location = New System.Drawing.Point(338, 128)
         Me.AddButton.Name = "AddButton"
         Me.AddButton.Size = New System.Drawing.Size(75, 19)
-        Me.AddButton.TabIndex = 26
+        Me.AddButton.TabIndex = 19
         Me.AddButton.Text = "Add "
         Me.AddButton.UseVisualStyleBackColor = True
         '

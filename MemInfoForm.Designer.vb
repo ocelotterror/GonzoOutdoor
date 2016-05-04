@@ -57,7 +57,6 @@ Partial Class MemInfoForm
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SearchForMemberToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.searchButton = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -339,21 +338,11 @@ Partial Class MemInfoForm
         Me.SearchForMemberToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
         Me.SearchForMemberToolStripMenuItem.Text = "Search For Member"
         '
-        'searchButton
-        '
-        Me.searchButton.Location = New System.Drawing.Point(441, 365)
-        Me.searchButton.Name = "searchButton"
-        Me.searchButton.Size = New System.Drawing.Size(75, 23)
-        Me.searchButton.TabIndex = 31
-        Me.searchButton.Text = "Search"
-        Me.searchButton.UseVisualStyleBackColor = True
-        '
         'MemInfoForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(528, 534)
-        Me.Controls.Add(Me.searchButton)
         Me.Controls.Add(Me.chargeButton)
         Me.Controls.Add(Me.custID)
         Me.Controls.Add(Me.printButton)
@@ -386,7 +375,7 @@ Partial Class MemInfoForm
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "MemInfoForm"
-        Me.Text = "Form1"
+        Me.Text = "MembersInfo"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -426,5 +415,4 @@ Partial Class MemInfoForm
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents MenuToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SearchForMemberToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents searchButton As Button
 End Class

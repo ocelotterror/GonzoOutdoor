@@ -209,7 +209,6 @@ C:\Users\Persephone\Source\Repos\GonzoOutdoor\obj\Debug\OutdoorEquip.vbprojResol
 C:\Users\Persephone\Source\Repos\GonzoOutdoor\obj\Debug\WindowsApplication1.Add_Update_Screen.resources
 C:\Users\Persephone\Source\Repos\GonzoOutdoor\obj\Debug\WindowsApplication1.CustomerOrderInformation.resources
 C:\Users\Persephone\Source\Repos\GonzoOutdoor\obj\Debug\WindowsApplication1.Inventory_directional_screen.resources
-C:\Users\Persephone\Source\Repos\GonzoOutdoor\obj\Debug\WindowsApplication1.MDIParent1.resources
 C:\Users\Persephone\Source\Repos\GonzoOutdoor\obj\Debug\WindowsApplication1.MemInfoForm.resources
 C:\Users\Persephone\Source\Repos\GonzoOutdoor\obj\Debug\WindowsApplication1.MemInputForm.resources
 C:\Users\Persephone\Source\Repos\GonzoOutdoor\obj\Debug\WindowsApplication1.Resources.resources

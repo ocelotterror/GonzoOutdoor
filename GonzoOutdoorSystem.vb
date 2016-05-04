@@ -122,7 +122,7 @@ Public Class GonzoOutdoorSystem
         End While
         Dim pmtamount As Double
         Double.TryParse(MemInputForm.balanceTextbox.Text, pmtamount)
-        Call MemInfoForm.chargeCust(pmtamount)
+        Call MemInfoForm.chargeCust()
     End Sub
 
     Private Sub OrderShowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrderShowToolStripMenuItem.Click
